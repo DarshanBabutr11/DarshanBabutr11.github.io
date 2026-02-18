@@ -14,6 +14,26 @@ color:white;
 scroll-behavior:smooth;
 }
 
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+gap:40px;
+padding:15px;
+z-index:1000;
+}
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+nav a:hover{color:#00ffe7}
+
 /* HERO */
 .hero{
 height:100vh;
@@ -29,8 +49,7 @@ background:linear-gradient(90deg,#00ffe7,#00c3ff);
 -webkit-background-clip:text;
 color:transparent;
 }
-.hero p{margin-top:20px;font-size:20px;opacity:0.9}
-
+.hero p{margin-top:15px;font-size:20px}
 .btn{
 margin-top:30px;
 padding:14px 30px;
@@ -38,7 +57,7 @@ border-radius:40px;
 background:#00e6e6;
 color:black;
 text-decoration:none;
-font-weight:bold;
+_pktfont-weight:bold;
 transition:.3s;
 }
 .btn:hover{transform:scale(1.08)}
@@ -47,7 +66,7 @@ transition:.3s;
 section{
 max-width:1100px;
 margin:auto;
-padding:80px 20px;
+padding:100px 20px;
 }
 h2{
 text-align:center;
@@ -55,13 +74,11 @@ margin-bottom:40px;
 font-size:38px;
 color:#00ffe7;
 }
-
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
-
 .card{
 background:rgba(255,255,255,0.08);
 padding:25px;
@@ -74,10 +91,9 @@ transform:translateY(-8px);
 background:rgba(255,255,255,0.15);
 }
 
-/* FOOTER */
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 opacity:.8;
 }
 </style>
@@ -85,14 +101,32 @@ opacity:.8;
 
 <body>
 
+<nav>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <div class="hero">
 <h1>Darshan Babu T R</h1>
 <p>Trainee Digital Technology Specialist — Sonata Software</p>
-<p>Robotics • Backend Engineering • Cloud • Autonomous Navigation</p>
+<p>Backend • Robotics • Cloud • Autonomous Navigation</p>
 <a class="btn" href="#">Download Resume</a>
 </div>
 
-<section>
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+Computer Science graduate specializing in scalable backend systems,
+ROS2 autonomous robotics, and cloud-native architectures. Passionate
+about building distributed systems, autonomous navigation platforms,
+and secure high-performance APIs.
+</div>
+</section>
+
+<section id="experience">
 <h2>Experience</h2>
 <div class="grid">
 <div class="card">
@@ -103,30 +137,51 @@ Jan 2026 – Present
 
 <div class="card">
 <b>PES University</b><br>
-Autonomous Indoor Navigation Intern<br>
-Built ROS2 SLAM navigation system using Cartographer & Nav2.
-Jan 2025 - July 2025
+Autonomous Navigation Intern<br>
+Built SLAM navigation system using ROS2 Cartographer & Nav2.
 </div>
 </div>
 </section>
 
-<section>
+<section id="projects">
 <h2>Projects</h2>
 <div class="grid">
-<div class="card"><b>Payment REST API</b><br>Flask, Docker, AWS secure JWT API</div>
-<div class="card"><b>Secure Chat Application</b><br>SSL encrypted multi-client messaging</div>
-<div class="card"><b>CarZ Showroom App</b><br>Full-stack inventory management system</div>
-<div class="card"><b>Face Recognition Pipeline</b><br>PyTorch + OpenCV real-time recognition</div>
+<div class="card">
+<b>Payment REST API</b><br>
+Flask, Docker, AWS secure JWT API<br>
+<a href="#">GitHub Repo</a>
+</div>
+
+<div class="card">
+<b>Secure Chat Application</b><br>
+Encrypted multi-client socket messaging<br>
+<a href="#">GitHub Repo</a>
+</div>
+
+<div class="card">
+<b>CarZ Showroom App</b><br>
+Streamlit + MySQL full-stack platform<br>
+<a href="#">GitHub Repo</a>
+</div>
 </div>
 </section>
 
-<section>
+<section id="skills">
 <h2>Skills</h2>
 <div class="grid">
 <div class="card">Python, C++, JavaScript</div>
 <div class="card">ROS2, OpenCV, PyTorch</div>
 <div class="card">Flask, Django, REST APIs</div>
 <div class="card">AWS, Docker, MySQL, MongoDB</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+Email: darshanbabutr@gmail.com<br>
+GitHub: github.com/DarshanBabutr11<br>
+LinkedIn: https://www.linkedin.com/in/darshan-babu-t-r-6056912a9/
 </div>
 </section>
 
